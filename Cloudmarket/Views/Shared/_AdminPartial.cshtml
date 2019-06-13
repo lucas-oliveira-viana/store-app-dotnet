@@ -1,0 +1,35 @@
+﻿@using Cloudmarket.Web.Controllers
+@using Microsoft.AspNet.Identity
+@using Cloudmarket.Infra.Data.Repository
+
+@{ 
+    ManageRoleController mrc = new ManageRoleController();
+}
+
+<ul class="nav navbar-nav">
+    <li>@Html.ActionLink("Produtos", "Index", "ProdutoCliente")</li>
+</ul>
+@if (User.Identity.IsAuthenticated)
+{
+    if (mrc.GetUserRole(User.Identity.GetUserName()).Equals("Administrador"))
+    {
+        <ul class="nav navbar-nav">
+
+                <li>@Html.ActionLink("Carrinho", "Index", "Carrinho")</li>
+            <li class="nav-item dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown">Gerenciar ▾</a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li>@Html.ActionLink("Gerenciar Produtos", "Index", "Produto")</li>
+                    <li>@Html.ActionLink("Gerenciar Usuarios", "Index", "AccountManager")</li>
+                    <li>@Html.ActionLink("Gerenciar Compras", "Index", "Compra")</li>
+                </ul>
+</li>
+        </ul>
+    }
+    else if (mrc.GetUserRole(User.Identity.GetUserName()).Equals("Cliente"))
+    {
+        <ul class="nav navbar-nav col-md-offset-1">
+            <li>@Html.ActionLink("Carrinho", "Index", "Carrinho")</li>
+        </ul>
+    }
+}

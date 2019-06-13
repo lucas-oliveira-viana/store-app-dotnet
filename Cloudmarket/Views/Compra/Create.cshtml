@@ -1,0 +1,36 @@
+﻿@model Cloudmarket.Domain.Entities.Compra
+@using Microsoft.AspNet.Identity
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Comprar</h2>
+@Html.AntiForgeryToken()
+
+<div id="tabela-carrinho-compra"></div>
+
+@Html.Partial("_EnderecoPartial")
+@Html.Partial("_PagamentoPartial")
+@Html.Partial("_FinalizarCompraPartial")
+
+@section Scripts {
+    @Scripts.Render("~/Scripts/tools/ajax/getCarrinhoSessionByUsuarioId.js")
+    @Scripts.Render("~/Scripts/tools/ajax/getProdutoByCodigo.js")
+    @Scripts.Render("~/Scripts/compra/getConteudoListaParaTabelaCompra.js")
+    @Scripts.Render("~/Scripts/tools/gerarTabelaCompra.js")
+    @Scripts.Render("~/Scripts/compra/compra.js")
+    @Scripts.Render("~/Scripts/compra/mapearValoresEndereco.js")
+    @Scripts.Render("~/Scripts/compra/mapearValoresCartao.js")
+    @Scripts.Render("~/Scripts/compra/ajax/cadastroEndereco.js")
+    @Scripts.Render("~/Scripts/compra/ajax/cadastroPagamento.js")
+    @Scripts.Render("~/Scripts/compra/ajax/cadastroCompra.js")
+    @Scripts.Render("~/Scripts/compra/ocultarOutrasFases.js")
+    @Scripts.Render("~/Scripts/compra/transicaoEntreItens.js")
+    @Scripts.Render("~/Scripts/compra/endereco/apicorreios.js")
+}
+
+<script>
+    var usuarioId = '@User.Identity.GetUserId()'
+    var permissaoCadastrarEndereco = false;
+</script>

@@ -1,0 +1,16 @@
+﻿@using Cloudmarket.Service;
+
+@{ 
+    ProdutoService ps = new ProdutoService();
+
+    var listaDeCategorias = new List<string>();
+
+    foreach (var produto in ps.getUmaCategoriaDeCada())
+    {
+        listaDeCategorias.Add(produto);
+    }
+
+    var listaDeCategoriasToSelectItem = listaDeCategorias.Select(x => new SelectListItem() { Text = x.ToString() });
+}
+
+@Html.DropDownList("Categoria", listaDeCategoriasToSelectItem, "Todas as Categorias", new { @class = "margin-top-15" })

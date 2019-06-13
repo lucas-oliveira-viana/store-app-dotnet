@@ -1,0 +1,28 @@
+﻿@using Microsoft.AspNet.Identity;
+@using Cloudmarket.Service;
+@using System.Web.Script.Serialization;
+@using Cloudmarket.Controllers
+@{
+    ViewBag.Title = "Consulta";
+}
+
+<h2>Consulta</h2>
+
+@{
+    ProdutoService ps = new ProdutoService();
+}
+<div>
+    @foreach (var produto in ps.getUmaCategoriaDeCada())
+    {
+        Html.Display(produto);
+    }
+</div>
+--
+<div>
+</div>
+--
+<div>
+</div>
+--
+<div>
+</div>

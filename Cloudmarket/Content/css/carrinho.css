@@ -1,0 +1,19 @@
+﻿body {
+    background-color: white;
+    background: linear-gradient(to right, rgba(4, 53, 108, 1) -90%, rgba(0, 30, 50, 1) 100%);
+    background-size: cover;
+    background-position: right;
+    color: white;
+}
+
+.carrinho-vazio {
+    font-size: 18px;
+}
+
+.btn-remover {
+    color: black;
+}
+
+#comprar {
+    color: black;
+}

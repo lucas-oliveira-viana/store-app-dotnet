@@ -1,0 +1,47 @@
+﻿body {
+    background: linear-gradient(to right, rgba(4, 53, 108, 1) -90%, rgba(0, 30, 50, 1) 100%)
+}
+
+.body-content {
+    background-color: white;
+    border-radius: 5px;
+}
+
+#desc-container {
+    margin-top: 1em;
+    padding-right: 30px;
+    padding-left: 0;
+    margin-left: -10px;
+}
+
+.nome {
+    font-size: 22px;
+}
+
+.preco {
+    font-size: 25px;
+}
+
+.codigo {
+    font-size: 14px;
+}
+
+.codigo-label {
+    font-weight: normal;
+}
+
+.estoque {
+    font-size: 14px;
+}
+
+.estoque-label {
+    font-weight: normal;
+}
+
+.mt-20{
+    margin-top: 20px;
+}
+
+.mt-25{
+    margin-top: 25px;
+}

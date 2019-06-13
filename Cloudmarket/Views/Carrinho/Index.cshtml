@@ -1,0 +1,19 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Carrinho</h2>
+
+<div id="tabela-carrinho-compra"></div>
+
+<button id="comprar" action="/Compra/Create">Comprar</button>
+
+@section Scripts {
+    @Styles.Render("~/Content/css/carrinho.css")
+    @Scripts.Render("~/Scripts/tools/ajax/getProdutoByCodigo.js")
+    @Scripts.Render("~/Scripts/tools/ajax/getCarrinhoSessionByUsuarioId.js")
+    @Scripts.Render("~/Scripts/tools/getConteudoListaParaTabelaCarrinho.js")
+    @Scripts.Render("~/Scripts/tools/gerarTabelaCarrinho.js")
+    @Scripts.Render("~/Scripts/carrinho/carrinho.js")
+}

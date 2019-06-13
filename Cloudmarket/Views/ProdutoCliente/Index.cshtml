@@ -1,0 +1,77 @@
+﻿@model IEnumerable<Cloudmarket.Domain.Entities.Produto>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="jumbotron">
+    <div class="container">
+        <div class="col-md-6">
+            <h2>Confira nossos produtos!</h2>
+            <p class="lead">Aqui temos os melhores preços!</p>
+        </div>
+    </div>
+</div>
+<div class="container area-produtos">
+    <nav id="sidebar" class="nav nav-pills nav-stacked col-md-2">
+        <div class="filtros">
+            <h4 class="msg-filtros">Filtros</h4>
+            <img class="img-filtros" src="../../img/filter.png">
+        </div>
+        
+        <div class="row sidebar-elements">
+            @Html.Partial("_DropdownFilterCategory")
+        </div>
+    </nav>
+    <table class="table" id="table-produto-cli">
+        <thead>
+            <tr class="head">
+                <th class="head-nome">
+                    @Html.DisplayNameFor(model => model.Nome)
+                </th>
+                <th class="head-preco">
+                    @Html.DisplayNameFor(model => model.Preco)
+                </th>
+                <th class="head-img">
+                    @Html.DisplayNameFor(model => model.ImagemPath)
+                </th>
+                <th class="head-categoria">
+                    @Html.DisplayNameFor(model => model.Categoria)
+                </th>
+            </tr>
+        </thead>
+
+        <tbody class="col-md-12">
+            @{ int i = 1; }
+            @foreach (var item in Model)
+            {
+                <tr class="body">
+                    <td class="body-img img-@i">
+                        <a href="ProdutoCliente/Details/@item.Id">
+                            <img src="@Html.DisplayFor(modelItem => item.ImagemPath)" width="200" height="150" />
+                        </a>
+                    </td>
+                    <td class="body-nome nome-@i">
+                        <a href="ProdutoCliente/Details/@item.Id">
+                            @Html.DisplayFor(modelItem => item.Nome)
+                        </a>
+                    </td>
+                    <td class="body-preco preco-@i">
+                        <h3 class="display-preco">@Html.DisplayFor(modelItem => item.Preco)</h3>
+                    </td>
+                    <td class="body-categoria categoria-@i">
+                        @Html.DisplayFor(modelItem => item.Categoria)
+                    </td>
+                </tr>
+                i++;
+            }
+        </tbody>
+    </table>
+</div>
+
+@section Scripts{
+    @Scripts.Render("~/media/js/jquery.js")
+    @Scripts.Render("~/media/js/jquery.DataTables.js")
+    @Scripts.Render("~/Scripts/produto-cliente/index.js")
+    @Styles.Render("~/Content/css/produtos-cliente-index.css")
+}

@@ -1,0 +1,95 @@
+﻿body, html {
+    width: 100%;
+    padding-bottom: 0;
+    height: 100vh;
+}
+
+body {
+    background: linear-gradient(to right, rgba(4, 53, 108, 1) 30%, rgba(0, 30, 50, 0.54) 100%), url(../../img/girl-869213_1280.jpg);
+    background-size: cover;
+    background-position: right;
+}
+
+h4 {
+    font-family: 'Montserrat';
+    margin-top: 20px;
+    margin-left: 41%;
+    color: white;
+}
+
+.formulario-login {
+    background: linear-gradient(to right, rgb(4, 53, 108) 0, rgb(5, 50, 101) 100%);
+    margin-top: 30px;
+    height: 490px;
+    width: 380px;
+    border-radius: 8px;
+    box-shadow: 0px 7px 23px -12px rgba(0,0,0,0.66);
+}
+
+.form-control {
+    background: transparent;
+    border: none;
+    border-bottom: solid 1px white;
+    border-radius: unset;
+    -webkit-box-shadow: none;
+    width: 130%;
+    color: white;
+    font-family: 'Open Sans';
+}
+
+    .form-control:focus {
+        border: none;
+        border-bottom: solid 1px white;
+        -webkit-box-shadow: none;
+    }
+
+    .form-control::placeholder {
+        color: white;
+        opacity: 0.5;
+        font-family: 'Open Sans';
+    }
+
+    .toggle {
+        color:white;
+    }
+
+
+.btn-default {
+    background: none;
+    border: 1px solid white;
+    color: white;
+}
+
+    .btn-default:hover {
+        border: 1px solid white;
+        color: rgb(5, 44, 80);
+        background: white;
+    }
+
+@media (min-width: 992px) {
+    .campos-login {
+        margin-left: 18%;
+    }
+}
+
+.checkbox label {
+    padding-left: 5px;
+}
+
+.msg-registrar {
+    color:white;
+}
+
+    .msg-registrar:hover {
+        color:white;
+    }
+
+.popover {
+    width: 180px;
+    background-color: #d71f1f;
+    font-weight: bold;
+}
+
+    .popover.right .arrow:after {
+        border-right-color: #d71f1f;
+    }

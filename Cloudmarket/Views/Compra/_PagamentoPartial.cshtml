@@ -1,0 +1,34 @@
+﻿@model Cloudmarket.Web.Models.PagamentoViewModel
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal form-pagamento">
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.Tipo, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EnumDropDownListFor(model => model.Tipo, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Tipo, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        @Html.Partial("_PagamentoPartialCartao")
+
+        <div class="form-group">
+            <input type="button" value="Finalizar Compra" class="btn btn-default btn-finalizar-compra" />
+        </div>
+    </div>
+}
+
+<script>
+    (function eventoOpcoesDePagamento() {
+        $("#Pagamento_Tipo").change(function (e) {
+            if (e.target.value == 0) {
+                $(".form-pagamento-cartao").fadeIn(500);
+            } else {
+                $(".form-pagamento-cartao").fadeOut(500);
+            }
+        })
+    }());
+</script>

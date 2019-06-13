@@ -1,0 +1,79 @@
+﻿@model Cloudmarket.Web.Models.RegisterViewModel
+
+@using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+{
+    @Html.AntiForgeryToken()
+    <div class="container-fluid formulario-cadastro">
+        <div class="top-form">
+            <h4>Registre-se</h4>
+            <h5>Junte-se a nós!</h5>
+            <hr />
+        </div>
+        <div class="btn-and-form">
+            <div class="container-fluid campos-cadastro">
+                <div class="form-group">
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.Nome, new { htmlAttributes = new { @class = "form-control nome", placeholder = @Html.DisplayNameFor(m => m.Nome) } })
+
+                        @Html.ValidationMessageFor(model => model.Nome, "", new { @class = "text-danger Nome-error" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.DataNascimento, new { htmlAttributes = new { @class = "form-control data-nascimento", placeholder = @Html.DisplayNameFor(m => m.DataNascimento) } })
+
+                        @Html.ValidationMessageFor(model => model.DataNascimento, "", new { @class = "text-danger DataNascimento-error" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.Rg, new { htmlAttributes = new { @class = "form-control rg", placeholder = @Html.DisplayNameFor(m => m.Rg) } })
+
+                        @Html.ValidationMessageFor(model => model.Rg, "", new { @class = "text-danger Rg-error" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.CPF, new { htmlAttributes = new { @class = "form-control cpf", placeholder = @Html.DisplayNameFor(m => m.CPF) } })
+
+                        @Html.ValidationMessageFor(model => model.CPF, "", new { @class = "text-danger CPF-error" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control email", placeholder = @Html.DisplayNameFor(m => m.Email) } })
+
+                        @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger Email-error" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "form-control senha", placeholder = @Html.DisplayNameFor(m => m.Password) } })
+
+                        @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger Password-error" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.ConfirmPassword, new { htmlAttributes = new { @class = "form-control confirmar-senha", placeholder = @Html.DisplayNameFor(m => m.ConfirmPassword) } })
+
+                        @Html.ValidationMessageFor(model => model.ConfirmPassword, "", new { @class = "text-danger ConfirmPassword-error" })
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-10">
+                    <input type="submit" class="btn btn-default" value="Registrar" />
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+@section Scripts {
+    @Scripts.Render("~/Scripts/register/register.js")
+    @Scripts.Render("~/Scripts/tools/colocarPopover.js")
+    @Scripts.Render("~/Scripts/tools/removerPopover.js")
+    @Scripts.Render("~/bundles/jqueryval")
+    @Styles.Render("~/Content/css/cadastro.css")
+}
