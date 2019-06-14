@@ -10,13 +10,13 @@ namespace Cloudmarket.Infra.Data.Repository
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
-        public List<string> getAllCategories()
+        public List<string> GetUmaCategoriaDeCada()
         {
             var todasCategoriasCadastradas = db.Produtos.Select(produto => produto.Categoria).ToList();
             return todasCategoriasCadastradas;
         }
 
-        public Produto getProdutoByCodigo(string codigo)
+        public Produto GetProdutoByCodigo(string codigo)
         {
             var produto = db.Produtos.Where(prod => prod.Codigo == codigo).ToList();
             return produto.First();

@@ -2,16 +2,16 @@
 using System.Web.Script.Serialization;
 using Cloudmarket.Infra.Data.Contexto;
 using Cloudmarket.Domain.Entities;
-using Cloudmarket.Service;
 using Cloudmarket.Models;
 using AutoMapper;
+using Cloudmarket.Infra.Data.Repository;
 
 namespace Cloudmarket.Web.Controllers
 {
     public class CarrinhoController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
-        private CarrinhoSessionService service = new CarrinhoSessionService();
+        private CarrinhoSessionRepository repo = new CarrinhoSessionRepository();
 
         // GET: Carrinho
         public ActionResult Index()
@@ -39,7 +39,7 @@ namespace Cloudmarket.Web.Controllers
         //GET: Carrinho/GetCarrinhoSessionByUsuarioId
         public string GetCarrinhoSessionByUsuarioId(string usuarioId)
         {
-            var list = service.GetCarrinhoSessionByUsuarioId(usuarioId);
+            var list = repo.GetCarrinhoSessionByUsuarioId(usuarioId);
             var jsonSerializer = new JavaScriptSerializer();
             return jsonSerializer.Serialize(list);
         }

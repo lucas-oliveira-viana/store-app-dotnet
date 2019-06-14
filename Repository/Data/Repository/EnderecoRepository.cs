@@ -8,7 +8,7 @@ namespace Cloudmarket.Infra.Data.Repository
 {
     public class EnderecoRepository : RepositoryBase<Endereco>, IEnderecoRepository
     {
-        public static List<string> nomesRua(int id_consultado)
+        public List<string> NomesRua(int id_consultado)
         {
             var ruas = new List<string>();
             using (ApplicationDbContext db = new ApplicationDbContext()) {

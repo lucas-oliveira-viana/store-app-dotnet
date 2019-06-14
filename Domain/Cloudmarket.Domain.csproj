@@ -55,17 +55,33 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Entities\IdentityModels.cs" />
-    <Compile Include="Interfaces\ICarrinhoSessionRepository.cs" />
-    <Compile Include="Interfaces\ICompraRepository.cs" />
-    <Compile Include="Interfaces\IEnderecoRepository.cs" />
-    <Compile Include="Interfaces\IRepositoryBase.cs" />
-    <Compile Include="Interfaces\IProdutoRepository.cs" />
-    <Compile Include="Interfaces\IUsuarioRepository.cs" />
+    <Compile Include="Interfaces\Repositories\ICarrinhoSessionRepository.cs" />
+    <Compile Include="Interfaces\Repositories\ICompraRepository.cs" />
+    <Compile Include="Interfaces\Repositories\IEnderecoRepository.cs" />
+    <Compile Include="Interfaces\Repositories\IPagamentoRepository.cs" />
+    <Compile Include="Interfaces\Repositories\IRepositoryBase.cs" />
+    <Compile Include="Interfaces\Repositories\IProdutoRepository.cs" />
+    <Compile Include="Interfaces\Repositories\IUsuarioRepository.cs" />
+    <Compile Include="Interfaces\Repositories\IProdutoCarrinhoRepository.cs" />
+    <Compile Include="Interfaces\Services\ICarrinhoSessionService.cs" />
+    <Compile Include="Interfaces\Services\ICompraService.cs" />
+    <Compile Include="Interfaces\Services\IEnderecoService.cs" />
+    <Compile Include="Interfaces\Services\IPagamentoService.cs" />
+    <Compile Include="Interfaces\Services\IProdutoCarrinhoService.cs" />
+    <Compile Include="Interfaces\Services\IProdutoService.cs" />
+    <Compile Include="Interfaces\Services\IServiceBase.cs" />
+    <Compile Include="Interfaces\Services\IUsuarioService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\CarrinhoSessionService.cs" />
+    <Compile Include="Services\CompraService.cs" />
+    <Compile Include="Services\EnderecoService.cs" />
+    <Compile Include="Services\PagamentoService.cs" />
+    <Compile Include="Services\ProdutoCarrinhoService.cs" />
+    <Compile Include="Services\ProdutoService.cs" />
+    <Compile Include="Services\ServiceBase.cs" />
+    <Compile Include="Services\UsuarioService.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Services\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />

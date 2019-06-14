@@ -10,7 +10,7 @@ namespace Cloudmarket.Infra.Data.Repository
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
-        public List<CarrinhoSession> getCarrinhoSessionByUsuarioId(string usuarioId)
+        public List<CarrinhoSession> GetCarrinhoSessionByUsuarioId(string usuarioId)
         {
             var carrinho = db.CarrinhoSessions.Where(carr => carr.UsuarioId == usuarioId).ToList();
             return carrinho;

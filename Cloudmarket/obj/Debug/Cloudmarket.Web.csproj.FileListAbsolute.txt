@@ -118,5 +118,3 @@ C:\Users\lucas.viana\source\repos\Cloudmarket\Cloudmarket\obj\Debug\Cloudmarket.
 C:\Users\lucas.viana\source\repos\Cloudmarket\Cloudmarket\obj\Debug\Cloudmarket.Web.csproj.CopyComplete
 C:\Users\lucas.viana\source\repos\Cloudmarket\Cloudmarket\obj\Debug\Cloudmarket.dll
 C:\Users\lucas.viana\source\repos\Cloudmarket\Cloudmarket\obj\Debug\Cloudmarket.pdb
-C:\Users\lucas.viana\source\repos\Cloudmarket\Cloudmarket\bin\Service.dll
-C:\Users\lucas.viana\source\repos\Cloudmarket\Cloudmarket\bin\Service.pdb

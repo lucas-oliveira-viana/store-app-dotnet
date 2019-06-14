@@ -390,10 +390,6 @@
       <Project>{39FBF508-7DC5-4DCF-93D0-C6FA230BCDEB}</Project>
       <Name>Cloudmarket.Infra</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Service\Cloudmarket.Service.csproj">
-      <Project>{ed270e5a-fe54-4b81-a897-9aa2a88b2ced}</Project>
-      <Name>Cloudmarket.Service</Name>
-    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

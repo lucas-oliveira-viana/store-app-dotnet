@@ -1,6 +1,6 @@
 ﻿using Cloudmarket.Domain.Entities;
 using Cloudmarket.Infra.Data.Contexto;
-using Cloudmarket.Service;
+using Cloudmarket.Infra.Data.Repository;
 using System.Linq;
 using System.Net;
 using System.Web.Mvc;
@@ -12,7 +12,7 @@ namespace Cloudmarket.Web.Controllers
     public class ProdutoClienteController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
-        private ProdutoService ps = new ProdutoService();
+        private ProdutoRepository ps = new ProdutoRepository();
 
         // GET: ProdutoCliente
         public ActionResult Index()
@@ -38,7 +38,7 @@ namespace Cloudmarket.Web.Controllers
         // GET: Produto/GetProdutoByCodigo/
         public string GetProdutoByCodigo(string codigo)
         {
-            var produto = ps.getProdutoByCodigo(codigo);
+            var produto = ps.GetProdutoByCodigo(codigo);
             var json = new JavaScriptSerializer().Serialize(produto);
             return json;
         }

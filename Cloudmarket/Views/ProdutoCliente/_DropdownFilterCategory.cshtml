@@ -1,11 +1,11 @@
-﻿@using Cloudmarket.Service;
+﻿@using Cloudmarket.Infra.Data.Repository;
 
 @{ 
-    ProdutoService ps = new ProdutoService();
+    ProdutoRepository repo = new ProdutoRepository();
 
     var listaDeCategorias = new List<string>();
 
-    foreach (var produto in ps.getUmaCategoriaDeCada())
+    foreach (var produto in repo.GetUmaCategoriaDeCada())
     {
         listaDeCategorias.Add(produto);
     }

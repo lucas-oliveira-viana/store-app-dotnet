@@ -3,7 +3,7 @@ using Cloudmarket.Domain.Interfaces;
 
 namespace Domain.Interfaces
 {
-    public interface IProdutoRepository : IRepositoryBase<Produto>
+    public interface IPagamentoRepository : IRepositoryBase<Pagamento>
     {
     }
 }

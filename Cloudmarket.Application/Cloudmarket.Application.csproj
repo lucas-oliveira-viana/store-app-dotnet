@@ -44,6 +44,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Interface\IAppServiceBase.cs" />
+    <Compile Include="Interface\ICarrinhoSessionAppService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -58,10 +60,6 @@
     <ProjectReference Include="..\Repository\Cloudmarket.Infra.csproj">
       <Project>{39FBF508-7DC5-4DCF-93D0-C6FA230BCDEB}</Project>
       <Name>Cloudmarket.Infra</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Service\Cloudmarket.Service.csproj">
-      <Project>{ED270E5A-FE54-4B81-A897-9AA2A88B2CED}</Project>
-      <Name>Cloudmarket.Service</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
