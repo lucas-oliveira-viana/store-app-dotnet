@@ -1,5 +1,5 @@
 ﻿body {
-    background: linear-gradient(to right, rgba(4, 53, 108, 1) -90%, rgba(0, 30, 50, 1) 100%)
+    background: linear-gradient(to right, rgb(0, 149, 249) -90%, rgb(99, 193, 255) 100%);
 }
 
 .body-content {
@@ -8,10 +8,10 @@
 }
 
 #desc-container {
-    margin-top: 1em;
     padding-right: 30px;
     padding-left: 0;
     margin-left: -10px;
+    margin-bottom: 1em;
 }
 
 .nome {
@@ -29,6 +29,31 @@
 .codigo-label {
     font-weight: normal;
 }
+
+.quantidade > span, .btn-quantidade-subtr, .btn-quantidade-add {
+    font-size: 18px;
+}
+
+.quantidade-view:hover {
+    text-decoration: none;
+}
+
+.btn-quantidade-subtr, .btn-quantidade-add {
+    background: linear-gradient(to right, rgb(0, 149, 249) -90%, rgb(0, 149, 249) 100%);
+    border: none;
+    color: white;
+    padding-left: 11px;
+    padding-right: 11px;
+    margin: 5px;
+}
+
+    .btn-quantidade-subtr:hover, .btn-quantidade-add:hover {
+        background: linear-gradient(to right, rgb(4, 118, 195) -90%, rgb(4, 118, 195) 100%);
+    }
+
+    .quantidade-view {
+        color: black;
+    }
 
 .estoque {
     font-size: 14px;

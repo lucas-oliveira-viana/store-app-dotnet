@@ -27,7 +27,6 @@
                     contentType: "application/json; charset=utf-8",
                     async: false,
                     success: function () {
-                        alert("Produto removido do carrinho com sucesso!")
                     },
                     error: function (xhr, err) {
                         alert("Ocorreu um erro ao remover o produto do carrinho!")

@@ -15,6 +15,7 @@
 @Html.Partial("_FinalizarCompraPartial")
 
 @section Scripts {
+    @Styles.Render("~/Content/css/compra.css")
     @Scripts.Render("~/Scripts/tools/ajax/getCarrinhoSessionByUsuarioId.js")
     @Scripts.Render("~/Scripts/tools/ajax/getProdutoByCodigo.js")
     @Scripts.Render("~/Scripts/compra/getConteudoListaParaTabelaCompra.js")

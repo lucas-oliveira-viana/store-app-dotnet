@@ -1,8 +1,5 @@
-﻿
-
-body {
-    background-color: white;
-    background: linear-gradient(to right, rgba(4, 53, 108, 1) 30%, rgba(0, 30, 50, 0.54) 100%), url(../../img/cell-phone-801946_1280.jpg);
+﻿body {
+    background: linear-gradient(to right, rgb(0, 149, 249) 30%, rgba(255, 255, 255, 0) 100%), url(../../img/cell-phone-801946_1280.jpg);
     background-size: cover;
     background-position: right;
 }

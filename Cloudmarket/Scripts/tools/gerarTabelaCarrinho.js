@@ -1,5 +1,6 @@
 ﻿function gerarTabelaCarrinho() {
-        const tabela = ' <table class="table" id="table-produto">' +
+    if (carrinhoExibido.length > 0) {
+        var tabela = ' <table class="table" id="table-produto">' +
             '<thead>' +
             '<tr>' +
             '<th>' +
@@ -23,4 +24,5 @@
             '</table>'
 
         $("#tabela-carrinho-compra").append(tabela);
+        }
     }

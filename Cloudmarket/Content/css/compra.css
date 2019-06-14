@@ -1,0 +1,8 @@
+﻿body {
+    background: linear-gradient(to right, rgb(0, 149, 249) -90%, rgb(99, 193, 255) 100%);
+    color:white;
+}
+
+.form-control {
+    border: none;
+}

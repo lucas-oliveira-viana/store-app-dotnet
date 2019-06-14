@@ -5,7 +5,7 @@
 }
 
 body {
-    background: linear-gradient(to right, rgba(4, 53, 108, 1) 30%, rgba(0, 30, 50, 0.54) 100%), url(../../img/girl-869213_1280.jpg);
+    background: linear-gradient(to right, rgb(0, 149, 249) 43%, rgba(255, 255, 255, 0) 100%), url(../../img/girl-869213_1280.jpg);
     background-size: cover;
     background-position: right;
 }
@@ -18,7 +18,7 @@ h4 {
 }
 
 .formulario-login {
-    background: linear-gradient(to right, rgb(4, 53, 108) 0, rgb(5, 50, 101) 100%);
+    background: linear-gradient(to right, rgb(0, 149, 249) 0, rgb(0, 149, 249) 100%);
     margin-top: 30px;
     height: 490px;
     width: 380px;
