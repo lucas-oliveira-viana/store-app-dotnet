@@ -1,3 +1,5 @@
+C:\Users\lucas.viana\source\repos\Cloudmarket\Cloudmarket\obj\Debug\Cloudmarket.Web.csproj.CoreCompileInputs.cache
+C:\Users\lucas.viana\source\repos\Cloudmarket\Cloudmarket\obj\Debug\Cloudmarket.Web.csprojAssemblyReference.cache
 C:\Users\lucas.viana\source\repos\Cloudmarket\Cloudmarket\bin\Cloudmarket.dll.config
 C:\Users\lucas.viana\source\repos\Cloudmarket\Cloudmarket\bin\Cloudmarket.dll
 C:\Users\lucas.viana\source\repos\Cloudmarket\Cloudmarket\bin\Cloudmarket.pdb
@@ -49,6 +51,7 @@ C:\Users\lucas.viana\source\repos\Cloudmarket\Cloudmarket\bin\roslyn\VBCSCompile
 C:\Users\lucas.viana\source\repos\Cloudmarket\Cloudmarket\bin\roslyn\VBCSCompiler.exe.config
 C:\Users\lucas.viana\source\repos\Cloudmarket\Cloudmarket\bin\Antlr3.Runtime.dll
 C:\Users\lucas.viana\source\repos\Cloudmarket\Cloudmarket\bin\AutoMapper.dll
+C:\Users\lucas.viana\source\repos\Cloudmarket\Cloudmarket\bin\Cloudmarket.Application.dll
 C:\Users\lucas.viana\source\repos\Cloudmarket\Cloudmarket\bin\Domain.dll
 C:\Users\lucas.viana\source\repos\Cloudmarket\Cloudmarket\bin\Microsoft.AspNet.Identity.Core.dll
 C:\Users\lucas.viana\source\repos\Cloudmarket\Cloudmarket\bin\Microsoft.AspNet.Identity.EntityFramework.dll
@@ -75,6 +78,8 @@ C:\Users\lucas.viana\source\repos\Cloudmarket\Cloudmarket\bin\System.Web.WebPage
 C:\Users\lucas.viana\source\repos\Cloudmarket\Cloudmarket\bin\System.Web.WebPages.dll
 C:\Users\lucas.viana\source\repos\Cloudmarket\Cloudmarket\bin\System.Web.WebPages.Razor.dll
 C:\Users\lucas.viana\source\repos\Cloudmarket\Cloudmarket\bin\WebGrease.dll
+C:\Users\lucas.viana\source\repos\Cloudmarket\Cloudmarket\bin\Cloudmarket.Application.pdb
+C:\Users\lucas.viana\source\repos\Cloudmarket\Cloudmarket\bin\Cloudmarket.Application.dll.config
 C:\Users\lucas.viana\source\repos\Cloudmarket\Cloudmarket\bin\Domain.pdb
 C:\Users\lucas.viana\source\repos\Cloudmarket\Cloudmarket\bin\Domain.dll.config
 C:\Users\lucas.viana\source\repos\Cloudmarket\Cloudmarket\bin\Repository.pdb
@@ -113,8 +118,13 @@ C:\Users\lucas.viana\source\repos\Cloudmarket\Cloudmarket\bin\pt-br\System.Web.W
 C:\Users\lucas.viana\source\repos\Cloudmarket\Cloudmarket\bin\pt-br\Microsoft.AspNet.Identity.Core.resources.dll
 C:\Users\lucas.viana\source\repos\Cloudmarket\Cloudmarket\bin\pt-br\Microsoft.AspNet.Identity.Owin.resources.dll
 C:\Users\lucas.viana\source\repos\Cloudmarket\Cloudmarket\bin\pt-br\Microsoft.AspNet.Identity.EntityFramework.resources.dll
-C:\Users\lucas.viana\source\repos\Cloudmarket\Cloudmarket\obj\Debug\Cloudmarket.Web.csprojAssemblyReference.cache
-C:\Users\lucas.viana\source\repos\Cloudmarket\Cloudmarket\obj\Debug\Cloudmarket.Web.csproj.CoreCompileInputs.cache
 C:\Users\lucas.viana\source\repos\Cloudmarket\Cloudmarket\obj\Debug\Cloudmarket.Web.csproj.CopyComplete
 C:\Users\lucas.viana\source\repos\Cloudmarket\Cloudmarket\obj\Debug\Cloudmarket.dll
 C:\Users\lucas.viana\source\repos\Cloudmarket\Cloudmarket\obj\Debug\Cloudmarket.pdb
+C:\Users\lucas.viana\source\repos\Cloudmarket\Cloudmarket\bin\Ninject.dll
+C:\Users\lucas.viana\source\repos\Cloudmarket\Cloudmarket\bin\Ninject.Web.Common.dll
+C:\Users\lucas.viana\source\repos\Cloudmarket\Cloudmarket\bin\Ninject.Web.Mvc.dll
+C:\Users\lucas.viana\source\repos\Cloudmarket\Cloudmarket\bin\Ninject.xml
+C:\Users\lucas.viana\source\repos\Cloudmarket\Cloudmarket\bin\Ninject.Web.Common.xml
+C:\Users\lucas.viana\source\repos\Cloudmarket\Cloudmarket\bin\Ninject.Web.Mvc.xml
+C:\Users\lucas.viana\source\repos\Cloudmarket\Cloudmarket\bin\WebActivatorEx.dll

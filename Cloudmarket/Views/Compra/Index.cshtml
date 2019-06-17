@@ -18,10 +18,10 @@
             @Html.DisplayNameFor(model => model.EnderecoId)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.ProdutoId)
+            ProdutoId
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Quantidade)
+            Quantidade
         </th>
         <th>
             @Html.DisplayNameFor(model => model.PagamentoId)
@@ -37,19 +37,22 @@
         <td>
             @Html.DisplayFor(modelItem => item.EnderecoId)
         </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ProdutoId)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Quantidade)
-        </td>
+        @foreach (var p in item.ProdutosCarrinho)
+        {
+            <td>
+                @Html.DisplayFor(modelItem => p.ProdutoId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => p.Quantidade)
+            </td>
+        }
         <td>
             @Html.DisplayFor(modelItem => item.PagamentoId)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+            @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.Id })
         </td>
     </tr>
 }

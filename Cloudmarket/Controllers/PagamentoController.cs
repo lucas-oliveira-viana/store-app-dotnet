@@ -1,8 +1,8 @@
 ﻿using System.Data.Entity;
-using System.Linq;
 using System.Net;
 using System.Web.Mvc;
 using AutoMapper;
+using Cloudmarket.Application.Interface;
 using Cloudmarket.Domain.Entities;
 using Cloudmarket.Infra.Data.Contexto;
 using Cloudmarket.Web.Models;
@@ -12,11 +12,17 @@ namespace Cloudmarket.Web.Controllers
     public class PagamentoController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
+        private readonly IPagamentoAppService _app;
+
+        public PagamentoController(IPagamentoAppService app)
+        {
+            _app = app;
+        }
 
         // GET: Pagamento
         public ActionResult Index()
         {
-            return View(db.Pagamentos.ToList());
+            return View(_app.GetAll());
         }
 
         // GET: Pagamento/Details/5
@@ -26,7 +32,7 @@ namespace Cloudmarket.Web.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Pagamento pagamento = db.Pagamentos.Find(id);
+            Pagamento pagamento = _app.GetById(id);
             if (pagamento == null)
             {
                 return HttpNotFound();
@@ -41,8 +47,6 @@ namespace Cloudmarket.Web.Controllers
         }
 
         // POST: Pagamento/Create
-        // Para se proteger de mais ataques, ative as propriedades específicas a que você quer se conectar. Para 
-        // obter mais detalhes, consulte https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public int Create([Bind(Include = "Id,UsuarioId,Tipo,InformacoesPagamento")] PagamentoViewModel pagamento)
@@ -54,7 +58,7 @@ namespace Cloudmarket.Web.Controllers
 
             if (ModelState.IsValid)
             {
-                db.Pagamentos.Add(model);
+                _app.Add(model);
                 db.SaveChanges();
                 return model.Id;
             }
@@ -69,7 +73,7 @@ namespace Cloudmarket.Web.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Pagamento pagamento = db.Pagamentos.Find(id);
+            Pagamento pagamento = _app.GetById(id);
             if (pagamento == null)
             {
                 return HttpNotFound();
@@ -91,7 +95,7 @@ namespace Cloudmarket.Web.Controllers
 
             if (ModelState.IsValid)
             {
-                db.Entry(model).State = EntityState.Modified;
+                _app.Update(model);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
@@ -105,7 +109,7 @@ namespace Cloudmarket.Web.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Pagamento pagamento = db.Pagamentos.Find(id);
+            Pagamento pagamento = _app.GetById(id);
             if (pagamento == null)
             {
                 return HttpNotFound();
@@ -118,8 +122,8 @@ namespace Cloudmarket.Web.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Pagamento pagamento = db.Pagamentos.Find(id);
-            db.Pagamentos.Remove(pagamento);
+            Pagamento pagamento = _app.GetById(id);
+            _app.Remove(pagamento);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

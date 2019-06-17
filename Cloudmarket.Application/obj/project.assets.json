@@ -255,19 +255,6 @@
         "runtime": {
           "bin/placeholder/Cloudmarket.Infra.dll": {}
         }
-      },
-      "Cloudmarket.Web/1.0.0": {
-        "type": "project",
-        "dependencies": {
-          "Cloudmarket.Domain": "1.0.0",
-          "Cloudmarket.Infra": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/Cloudmarket.Web.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Cloudmarket.Web.dll": {}
-        }
       }
     },
     ".NETFramework,Version=v4.6.1/win": {
@@ -523,19 +510,6 @@
         },
         "runtime": {
           "bin/placeholder/Cloudmarket.Infra.dll": {}
-        }
-      },
-      "Cloudmarket.Web/1.0.0": {
-        "type": "project",
-        "dependencies": {
-          "Cloudmarket.Domain": "1.0.0",
-          "Cloudmarket.Infra": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/Cloudmarket.Web.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Cloudmarket.Web.dll": {}
         }
       }
     },
@@ -793,19 +767,6 @@
         "runtime": {
           "bin/placeholder/Cloudmarket.Infra.dll": {}
         }
-      },
-      "Cloudmarket.Web/1.0.0": {
-        "type": "project",
-        "dependencies": {
-          "Cloudmarket.Domain": "1.0.0",
-          "Cloudmarket.Infra": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/Cloudmarket.Web.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Cloudmarket.Web.dll": {}
-        }
       }
     },
     ".NETFramework,Version=v4.6.1/win-x86": {
@@ -1061,19 +1022,6 @@
         },
         "runtime": {
           "bin/placeholder/Cloudmarket.Infra.dll": {}
-        }
-      },
-      "Cloudmarket.Web/1.0.0": {
-        "type": "project",
-        "dependencies": {
-          "Cloudmarket.Domain": "1.0.0",
-          "Cloudmarket.Infra": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/Cloudmarket.Web.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Cloudmarket.Web.dll": {}
         }
       }
     }
@@ -1381,11 +1329,6 @@
       "type": "project",
       "path": "../Repository/Cloudmarket.Infra.csproj",
       "msbuildProject": "../Repository/Cloudmarket.Infra.csproj"
-    },
-    "Cloudmarket.Web/1.0.0": {
-      "type": "project",
-      "path": "../Cloudmarket/Cloudmarket.Web.csproj",
-      "msbuildProject": "../Cloudmarket/Cloudmarket.Web.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -1393,7 +1336,6 @@
       "AutoMapper >= 8.1.1",
       "Cloudmarket.Domain >= 1.0.0",
       "Cloudmarket.Infra >= 1.0.0",
-      "Cloudmarket.Web >= 1.0.0",
       "Microsoft.AspNet.Identity.EntityFramework >= 2.2.2",
       "Microsoft.AspNet.Identity.Owin >= 2.2.2",
       "Microsoft.AspNet.Mvc >= 5.2.4",
@@ -1432,9 +1374,6 @@
       "frameworks": {
         "net461": {
           "projectReferences": {
-            "C:\\Users\\lucas.viana\\source\\repos\\Cloudmarket\\Cloudmarket\\Cloudmarket.Web.csproj": {
-              "projectPath": "C:\\Users\\lucas.viana\\source\\repos\\Cloudmarket\\Cloudmarket\\Cloudmarket.Web.csproj"
-            },
             "C:\\Users\\lucas.viana\\source\\repos\\Cloudmarket\\Domain\\Cloudmarket.Domain.csproj": {
               "projectPath": "C:\\Users\\lucas.viana\\source\\repos\\Cloudmarket\\Domain\\Cloudmarket.Domain.csproj"
             },

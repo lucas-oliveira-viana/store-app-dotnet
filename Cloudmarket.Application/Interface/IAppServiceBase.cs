@@ -6,7 +6,7 @@ namespace Cloudmarket.Application.Interface
     {
         void Add(TEntity obj);
 
-        TEntity GetById(int id);
+        TEntity GetById(int? id);
 
         IEnumerable<TEntity> GetAll();
 

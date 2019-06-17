@@ -4,14 +4,19 @@ using Cloudmarket.Infra.Data.Contexto;
 using Cloudmarket.Domain.Entities;
 using Cloudmarket.Models;
 using AutoMapper;
-using Cloudmarket.Infra.Data.Repository;
+using Cloudmarket.Application.Interface;
 
 namespace Cloudmarket.Web.Controllers
 {
     public class CarrinhoController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
-        private CarrinhoSessionRepository repo = new CarrinhoSessionRepository();
+        private readonly ICarrinhoSessionAppService _app;
+
+        public CarrinhoController(ICarrinhoSessionAppService app)
+        {
+            _app = app;
+        }
 
         // GET: Carrinho
         public ActionResult Index()
@@ -29,7 +34,7 @@ namespace Cloudmarket.Web.Controllers
 
                 var carrinhoSession = Mapper.Map<CarrinhoSessionViewModel, CarrinhoSession>(carrinhoSessionVm);
 
-                db.CarrinhoSessions.Add(carrinhoSession);
+                _app.Add(carrinhoSession);
                 db.SaveChanges();
                 return carrinhoSession.Id;
             }
@@ -39,7 +44,7 @@ namespace Cloudmarket.Web.Controllers
         //GET: Carrinho/GetCarrinhoSessionByUsuarioId
         public string GetCarrinhoSessionByUsuarioId(string usuarioId)
         {
-            var list = repo.GetCarrinhoSessionByUsuarioId(usuarioId);
+            var list = _app.GetCarrinhoSessionByUsuarioId(usuarioId);
             var jsonSerializer = new JavaScriptSerializer();
             return jsonSerializer.Serialize(list);
         }
@@ -50,8 +55,8 @@ namespace Cloudmarket.Web.Controllers
         {
             if (ModelState.IsValid)
             {
-                CarrinhoSession carrinhoSession = db.CarrinhoSessions.Find(id);
-                db.CarrinhoSessions.Remove(carrinhoSession);
+                CarrinhoSession carrinhoSession = _app.GetById(id);
+                _app.Remove(carrinhoSession);
                 db.SaveChanges();
             }
         }

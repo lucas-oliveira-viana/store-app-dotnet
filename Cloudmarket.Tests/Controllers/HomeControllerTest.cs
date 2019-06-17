@@ -1,5 +1,5 @@
 ﻿using System.Web.Mvc;
-using Cloudmarket.Controllers;
+using Cloudmarket.Web.Controllers;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Cloudmarket.Tests.Controllers

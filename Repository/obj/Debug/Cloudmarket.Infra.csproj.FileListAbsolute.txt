@@ -16,10 +16,10 @@ C:\Users\lucas.viana\source\repos\Cloudmarket\Repository\bin\Debug\Microsoft.Asp
 C:\Users\lucas.viana\source\repos\Cloudmarket\Repository\bin\Debug\pt-br\Microsoft.AspNet.Identity.Core.resources.dll
 C:\Users\lucas.viana\source\repos\Cloudmarket\Repository\bin\Debug\pt-br\Microsoft.AspNet.Identity.EntityFramework.resources.dll
 C:\Users\lucas.viana\source\repos\Cloudmarket\Repository\obj\Debug\Cloudmarket.Infra.csprojAssemblyReference.cache
+C:\Users\lucas.viana\source\repos\Cloudmarket\Repository\obj\Debug\Repository.Migrations.First.resources
+C:\Users\lucas.viana\source\repos\Cloudmarket\Repository\obj\Debug\Repository.Migrations.Second.resources
+C:\Users\lucas.viana\source\repos\Cloudmarket\Repository\obj\Debug\Cloudmarket.Infra.csproj.GenerateResource.cache
 C:\Users\lucas.viana\source\repos\Cloudmarket\Repository\obj\Debug\Cloudmarket.Infra.csproj.CoreCompileInputs.cache
 C:\Users\lucas.viana\source\repos\Cloudmarket\Repository\obj\Debug\Cloudmarket.Infra.csproj.CopyComplete
 C:\Users\lucas.viana\source\repos\Cloudmarket\Repository\obj\Debug\Repository.dll
 C:\Users\lucas.viana\source\repos\Cloudmarket\Repository\obj\Debug\Repository.pdb
-C:\Users\lucas.viana\source\repos\Cloudmarket\Repository\obj\Debug\Repository.Migrations.First.resources
-C:\Users\lucas.viana\source\repos\Cloudmarket\Repository\obj\Debug\Cloudmarket.Infra.csproj.GenerateResource.cache
-C:\Users\lucas.viana\source\repos\Cloudmarket\Repository\obj\Debug\Repository.Migrations.Second.resources

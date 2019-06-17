@@ -7,8 +7,6 @@ using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using Cloudmarket.Domain.Entities;
 using Cloudmarket.Web.Models;
-using Microsoft.AspNet.Identity.EntityFramework;
-using Cloudmarket.Infra.Data.Contexto;
 
 namespace Cloudmarket.Web.Controllers
 {

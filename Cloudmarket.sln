@@ -6,6 +6,9 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cloudmarket.Web", "Cloudmarket\Cloudmarket.Web.csproj", "{03D735C8-A413-48A6-8F65-9E9BD0BFF189}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cloudmarket.Tests", "Cloudmarket.Tests\Cloudmarket.Tests.csproj", "{200E345C-C098-450E-9C00-B46232BAD26A}"
+	ProjectSection(ProjectDependencies) = postProject
+		{515B7708-43E4-4BC2-BBF2-0BDC9AE5AC1E} = {515B7708-43E4-4BC2-BBF2-0BDC9AE5AC1E}
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Web", "1 - Web", "{0C4AFBD4-6C53-4B0A-9F53-2FB45740D211}"
 EndProject

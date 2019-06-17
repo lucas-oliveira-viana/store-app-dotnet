@@ -1,9 +1,8 @@
 ﻿using AutoMapper;
+using Cloudmarket.Application.Interface;
 using Cloudmarket.Domain.Entities;
 using Cloudmarket.Infra.Data.Contexto;
 using Cloudmarket.Web.Models;
-using System.Data.Entity;
-using System.Linq;
 using System.Net;
 using System.Web.Mvc;
 
@@ -12,11 +11,17 @@ namespace Cloudmarket.Web.Controllers
     public class EnderecoController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
+        private readonly IEnderecoAppService _app;
+
+        public EnderecoController(IEnderecoAppService app)
+        {
+            _app = app;
+        }
 
         // GET: Endereco
         public ActionResult Index()
         {
-            return View(db.Enderecos.ToList());
+            return View(_app.GetAll());
         }
 
         // GET: Endereco/Details/5
@@ -26,7 +31,7 @@ namespace Cloudmarket.Web.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Endereco endereco = db.Enderecos.Find(id);
+            Endereco endereco = _app.GetById(id);
             if (endereco == null)
             {
                 return HttpNotFound();
@@ -53,7 +58,7 @@ namespace Cloudmarket.Web.Controllers
 
             if (ModelState.IsValid)
             {
-                db.Enderecos.Add(model);
+                _app.Add(model);
                 db.SaveChanges();
                 return model.Id;
             }
@@ -68,7 +73,7 @@ namespace Cloudmarket.Web.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Endereco endereco = db.Enderecos.Find(id);
+            Endereco endereco = _app.GetById(id);
             if (endereco == null)
             {
                 return HttpNotFound();
@@ -90,7 +95,7 @@ namespace Cloudmarket.Web.Controllers
 
             if (ModelState.IsValid)
             {
-                db.Entry(model).State = EntityState.Modified;
+                _app.Update(model);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
@@ -104,7 +109,7 @@ namespace Cloudmarket.Web.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Endereco endereco = db.Enderecos.Find(id);
+            Endereco endereco = _app.GetById(id);
             if (endereco == null)
             {
                 return HttpNotFound();
@@ -118,8 +123,8 @@ namespace Cloudmarket.Web.Controllers
         public ActionResult DeleteConfirmed(int id)
         {
 
-            Endereco endereco = db.Enderecos.Find(id);
-            db.Enderecos.Remove(endereco);
+            Endereco endereco = _app.GetById(id);
+            _app.Remove(endereco);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

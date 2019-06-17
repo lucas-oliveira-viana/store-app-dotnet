@@ -15,3 +15,4 @@ C:\Users\lucas.viana\source\repos\Cloudmarket\Domain\obj\Debug\Cloudmarket.Domai
 C:\Users\lucas.viana\source\repos\Cloudmarket\Domain\obj\Debug\Cloudmarket.Domain.csproj.CopyComplete
 C:\Users\lucas.viana\source\repos\Cloudmarket\Domain\obj\Debug\Domain.dll
 C:\Users\lucas.viana\source\repos\Cloudmarket\Domain\obj\Debug\Domain.pdb
+C:\Users\lucas.viana\source\repos\Cloudmarket\Domain\obj\Debug\Cloudmarket.Domain.csprojAssemblyReference.cache

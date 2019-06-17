@@ -3,10 +3,10 @@ using System.Linq;
 using System.Net;
 using System.Web.Mvc;
 using AutoMapper;
+using Cloudmarket.Application.Interface;
 using Cloudmarket.Domain.Entities;
 using Cloudmarket.Infra.Data.Contexto;
 using Cloudmarket.Web.Models;
-using Repository.Data.Repository;
 
 namespace Cloudmarket.Web.Controllers
 {
@@ -14,7 +14,12 @@ namespace Cloudmarket.Web.Controllers
     public class CompraController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
-        private CompraRepository repo = new CompraRepository();
+        private readonly ICompraAppService _app;
+
+        public CompraController(ICompraAppService app)
+        {
+            _app = app;
+        }
 
         // GET: Compra
         public ActionResult Index()
@@ -29,7 +34,8 @@ namespace Cloudmarket.Web.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Compra compra = db.Compras.Find(id);
+
+            Compra compra = _app.GetById(id);
             if (compra == null)
             {
                 return HttpNotFound();
@@ -54,7 +60,7 @@ namespace Cloudmarket.Web.Controllers
                 new MapperConfiguration(map => { map.CreateMap<CompraViewModel, Compra>(); });
                 var model = Mapper.Map<CompraViewModel, Compra>(compra);
 
-                repo.Add(model);
+                _app.Add(model);
                 db.SaveChanges();
             }
         }
@@ -66,7 +72,7 @@ namespace Cloudmarket.Web.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Compra compra = db.Compras.Find(id);
+            Compra compra = _app.GetById(id);
             if (compra == null)
             {
                 return HttpNotFound();
@@ -81,7 +87,7 @@ namespace Cloudmarket.Web.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Entry(compra).State = EntityState.Modified;
+                _app.Update(compra);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
@@ -95,7 +101,7 @@ namespace Cloudmarket.Web.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Compra compra = db.Compras.Find(id);
+            Compra compra = _app.GetById(id);
             if (compra == null)
             {
                 return HttpNotFound();
@@ -108,8 +114,8 @@ namespace Cloudmarket.Web.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Compra compra = db.Compras.Find(id);
-            db.Compras.Remove(compra);
+            Compra compra = _app.GetById(id);
+            _app.Remove(compra);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

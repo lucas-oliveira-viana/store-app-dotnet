@@ -13,7 +13,6 @@ namespace Cloudmarket.Web.Controllers
     public class ProdutoController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
-        
 
         // GET: Produto
         public ActionResult Index()
@@ -36,8 +35,6 @@ namespace Cloudmarket.Web.Controllers
             return View(produto);
         }
 
-        
-
         // GET: Produto/Create
         public ActionResult Create()
         {
@@ -45,8 +42,6 @@ namespace Cloudmarket.Web.Controllers
         }
 
         // POST: Produto/Create
-        // Para se proteger de mais ataques, ative as propriedades específicas a que você quer se conectar. Para 
-        // obter mais detalhes, consulte https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "Id,Nome,Preco,Marca,Categoria,Modelo,Codigo,Descricao,ImagemPath,QtdEstoque,QtdVendida")] ProdutoViewModel produto)
@@ -84,8 +79,6 @@ namespace Cloudmarket.Web.Controllers
         }
 
         // POST: Produto/Edit/5
-        // Para se proteger de mais ataques, ative as propriedades específicas a que você quer se conectar. Para 
-        // obter mais detalhes, consulte https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "Id,Nome,Preco,Marca,Categoria,Modelo,Codigo,Descricao,ImagemPath,QtdEstoque,QtdVendida")] ProdutoViewModel produto)
