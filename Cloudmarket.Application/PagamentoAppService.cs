@@ -11,5 +11,10 @@ namespace Cloudmarket.Application.Interface
         {
             _pagamentoService = pagamentoService;
         }
+
+        public Pagamento GetUltimoCartaoCadastrado(string usuarioId)
+        {
+            return _pagamentoService.GetUltimoCartaoCadastrado(usuarioId);
+        }
     }
 }

@@ -1,8 +1,23 @@
 ﻿body {
-    background: linear-gradient(to right, rgb(0, 149, 249) -90%, rgb(99, 193, 255) 100%);
-    color:white;
+    background: linear-gradient(to right, rgb(0, 149, 249) -90%, rgb(0, 149, 249) 100%);
+    color: white;
 }
 
 .form-control {
     border: none;
 }
+
+.btn-default {
+    background: none;
+    border: 1px solid white;
+    color: white;
+    font-size: 15px;
+    padding-bottom: 8px;
+    margin-left: 22%;
+}
+
+    .btn-default:hover {
+        border: 1px solid white;
+        color: rgb(0, 149, 249);
+        background: white;
+    }

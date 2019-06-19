@@ -6,5 +6,7 @@ namespace Domain.Interfaces.Services
     public interface IEnderecoService : IServiceBase<Endereco>
     {
         List<string> NomesRua(int id_consultado);
+
+        Endereco GetUltimoEnderecoCadastrado(string usuarioId);
     }
 }

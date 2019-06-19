@@ -14,6 +14,11 @@ namespace Cloudmarket.Application
             _enderecoService = enderecoService;
         }
 
+        public Endereco GetUltimoEnderecoCadastrado(string usuarioId)
+        {
+            return _enderecoService.GetUltimoEnderecoCadastrado(usuarioId);
+        }
+
         public List<string> NomesRua(int id_consultado)
         {
             return _enderecoService.NomesRua(id_consultado);

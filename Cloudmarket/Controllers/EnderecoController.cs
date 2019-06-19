@@ -129,6 +129,13 @@ namespace Cloudmarket.Web.Controllers
             return RedirectToAction("Index");
         }
 
+        // GET: Endereco/GetUltimoEnderecoCadastrado
+        public JsonResult GetUltimoEnderecoCadastrado(string usuarioId)
+        {
+            var endereco = _app.GetUltimoEnderecoCadastrado(usuarioId);
+            return Json(endereco, JsonRequestBehavior.AllowGet);
+        }
+
         protected override void Dispose(bool disposing)
         {
             if (disposing)

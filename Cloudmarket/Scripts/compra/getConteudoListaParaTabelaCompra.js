@@ -10,7 +10,7 @@
             elemento.Quantidade +
             '</td>' +
             '<td>' +
-            elemento.Preco +
+            "R$ " + elemento.Preco.toString().replace(".", ",") +
             '</td>' +
             '</tr>'
     })

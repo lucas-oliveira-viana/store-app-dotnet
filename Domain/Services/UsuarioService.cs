@@ -10,9 +10,19 @@ namespace Domain.Services
 
         public UsuarioService(IUsuarioRepository repo) : base(repo) => _repo = repo;
 
+        public string FindCpfById(string usuarioId)
+        {
+            return _repo.FindCpfById(usuarioId);
+        }
+
         public string FindNomeById(string id_usuario)
         {
             return _repo.FindNomeById(id_usuario);
+        }
+
+        public string FindRgById(string usuarioId)
+        {
+            return _repo.FindRgById(usuarioId);
         }
 
         public ApplicationUser FindUsuarioById(string id_usuario)

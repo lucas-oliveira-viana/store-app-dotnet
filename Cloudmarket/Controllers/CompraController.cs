@@ -1,4 +1,4 @@
-﻿using System.Data.Entity;
+﻿using System.Collections;
 using System.Linq;
 using System.Net;
 using System.Web.Mvc;
@@ -118,6 +118,13 @@ namespace Cloudmarket.Web.Controllers
             _app.Remove(compra);
             db.SaveChanges();
             return RedirectToAction("Index");
+        }
+
+        // GET: Compra/GetCincoPrimeirasComprasByUsuarioId
+        public JsonResult GetCincoPrimeirasComprasIdByUsuarioId(string usuarioId)
+        {
+            var compras = _app.GetGetCincoPrimeirasComprasIdByUsuarioId(usuarioId);
+            return Json(compras, JsonRequestBehavior.AllowGet);
         }
 
         protected override void Dispose(bool disposing)

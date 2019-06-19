@@ -8,17 +8,23 @@ namespace Cloudmarket.Infra.Data.Repository
 {
     public class EnderecoRepository : RepositoryBase<Endereco>, IEnderecoRepository
     {
+        ApplicationDbContext db = new ApplicationDbContext();
+
         public List<string> NomesRua(int id_consultado)
         {
             var ruas = new List<string>();
-            using (ApplicationDbContext db = new ApplicationDbContext()) {
-                var enderecosBanco = db.Enderecos.Where(e => e.Id == id_consultado);
-                foreach (var endereco in enderecosBanco)
-                {
-                    ruas.Add(endereco.Rua);
-                }
+
+            var enderecosBanco = db.Enderecos.Where(e => e.Id == id_consultado);
+            foreach (var endereco in enderecosBanco)
+            {
+                ruas.Add(endereco.Rua);
             }
             return ruas;
+        }
+
+        public Endereco GetUltimoEnderecoCadastrado(string usuarioId)
+        {
+            return db.Enderecos.Where(e => e.UsuarioId == usuarioId).First();
         }
     }
 }

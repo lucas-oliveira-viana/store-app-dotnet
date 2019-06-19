@@ -2,10 +2,7 @@
 using Cloudmarket.Domain.Entities;
 using Domain.Interfaces.Services;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Collections;
 
 namespace Cloudmarket.Application
 {
@@ -16,6 +13,11 @@ namespace Cloudmarket.Application
         public CompraAppService(ICompraService compraService) : base(compraService)
         {
             _compraService = compraService;
+        }
+
+        public ArrayList GetGetCincoPrimeirasComprasIdByUsuarioId(string usuarioId)
+        {
+            return _compraService.GetGetCincoPrimeirasComprasIdByUsuarioId(usuarioId);
         }
     }
 }

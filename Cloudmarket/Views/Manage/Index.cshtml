@@ -1,1 +1,42 @@
-﻿@Html.Partial("_ChangePasswordPartial")
+﻿@using Microsoft.AspNet.Identity
+
+<div class="content">
+    <div class="row cover">
+        <div class="msg"></div>
+    </div>
+    <div class="row main-content">
+        <div class="container pedidos col-md-4">
+            <span class="pedidos-name">Pedidos</span>
+            <div class="numeros"></div>
+            <a class="ver-mais">ver mais +</a>
+        </div>
+
+        <div class="container principal col-md-4">
+            <span class="cartao-principal">Cartão Principal</span>
+            <div class="cartao-conteudo"></div>
+
+            <span class="endereco-principal">Endereço Principal</span>
+            <div class="endereco-conteudo"></div>
+        </div>
+
+
+        <div class="container informacoes col-md-4">
+            <span class="informacoes-name col-md-offset-1">Informações</span>
+            <span class="nome-completo">Nome completo</span>
+            <span class="nome-completo-conteudo"></span>
+            <span class="cpf">CPF</span>
+            <span class="cpf-conteudo"></span>
+            <span class="rg">RG</span>
+            <span class="rg-conteudo"></span>
+        </div>
+    </div>
+</div>
+
+<script>
+    var usuarioId = '@User.Identity.GetUserId()'
+</script>
+
+@section Scripts {
+    @Scripts.Render("~/Scripts/perfil/perfil.js")
+    @Styles.Render("~/Content/css/perfil.css")
+}

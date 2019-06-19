@@ -6,5 +6,7 @@ namespace Cloudmarket.Domain.Interfaces
     public interface IEnderecoRepository : IRepositoryBase<Endereco>
     {
         List<string> NomesRua(int id_consultado);
+
+        Endereco GetUltimoEnderecoCadastrado(string usuarioId);
     }
 }

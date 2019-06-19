@@ -7,6 +7,7 @@ using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using Cloudmarket.Domain.Entities;
 using Cloudmarket.Web.Models;
+using Cloudmarket.Application.Interface;
 
 namespace Cloudmarket.Web.Controllers
 {
@@ -15,9 +16,11 @@ namespace Cloudmarket.Web.Controllers
     {
         private ApplicationSignInManager _signInManager;
         private ApplicationUserManager _userManager;
+        private readonly IUsuarioAppService _app;
 
-        public AccountController()
+        public AccountController(IUsuarioAppService app)
         {
+            _app = app;
         }
 
         public AccountController(ApplicationUserManager userManager, ApplicationSignInManager signInManager )
@@ -379,6 +382,27 @@ namespace Cloudmarket.Web.Controllers
         public ActionResult ExternalLoginFailure()
         {
             return View();
+        }
+
+        // GET: Account/FindNomeById
+        public JsonResult FindNomeById(string usuarioId)
+        {
+            var nome = _app.FindNomeById(usuarioId);
+            return Json(nome, JsonRequestBehavior.AllowGet);
+        }
+
+        // GET: Account/FindCpfById
+        public JsonResult FindCpfById(string usuarioId)
+        {
+            var cpf = _app.FindCpfById(usuarioId);
+            return Json(cpf, JsonRequestBehavior.AllowGet);
+        }
+
+        // GET: Account/FindRgById
+        public JsonResult FindRgById(string usuarioId)
+        {
+            var rg = _app.FindRgById(usuarioId);
+            return Json(rg, JsonRequestBehavior.AllowGet);
         }
 
         protected override void Dispose(bool disposing)

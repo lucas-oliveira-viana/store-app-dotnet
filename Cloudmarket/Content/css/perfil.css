@@ -1,0 +1,77 @@
+﻿body {
+    background: linear-gradient(to right, rgb(0, 149, 249) -90%, rgb(99, 193, 255) 100%);
+    font-family: 'Roboto'
+}
+
+.content {
+    box-shadow: 0px -10px 30px 0px rgba(0,0,0,0.85);
+}
+
+.cover {
+    background: linear-gradient(to right, rgb(0, 149, 249) -90%, rgb(99, 193, 255) 100%);
+    height: 20vh;
+    background-color: red;
+}
+
+    .msg {
+        padding-top: 5vh;
+        padding-left: 38%;
+    }
+
+    .hello-msg {
+        font-size: 40px;
+    }
+
+.main-content {
+    background-color: white;
+}
+
+.pedidos, .informacoes, .principal {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.pedidos {
+    text-align: center;
+}
+
+.principal {
+    padding-top: 5%;
+    padding-left: 6%;
+}
+
+.informacoes {
+    padding-left: 5%;
+}
+
+.numeros, .informacoes {
+    display: grid;
+}
+
+.ver-mais {
+    cursor:pointer;
+}
+
+.pedidos-name, .informacoes-name {
+    font-size: 20px;
+    color: rgb(0, 149, 249);
+}
+
+.numero-pedido {
+    font-size: 16px;
+    color: black;
+    text-decoration: underline;
+}
+
+    .numero-pedido:hover {
+        color: rgb(0, 149, 249);
+    }
+
+.nome-completo, .cpf, .rg, .cartao-principal, .endereco-principal {
+    font-size: 13px;
+    color: rgb(0, 149, 249);
+}
+
+.nome-completo-conteudo, .cpf-conteudo, .rg-conteudo, .cartao-conteudo, .endereco-conteudo {
+    font-size: 16px;
+}

@@ -7,5 +7,9 @@ namespace Domain.Interfaces.Services
         ApplicationUser FindUsuarioById(string id_usuario);
 
         string FindNomeById(string id_usuario);
+
+        string FindCpfById(string usuarioId);
+
+        string FindRgById(string usuarioId);
     }
 }

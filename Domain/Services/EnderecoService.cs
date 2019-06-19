@@ -15,5 +15,10 @@ namespace Domain.Services
         {
             return _repo.NomesRua(id_consultado);
         }
+
+        public Endereco GetUltimoEnderecoCadastrado(string usuarioId)
+        {
+            return _repo.GetUltimoEnderecoCadastrado(usuarioId);
+        }
     }
 }

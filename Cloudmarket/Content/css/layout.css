@@ -2,6 +2,10 @@
     font-family: 'Open Sans';
 }
 
+html {
+    height: 100%;
+}
+
 .navbar > .container .navbar-brand {
     color: #262626;
 }
@@ -41,7 +45,19 @@
             cursor: pointer;
         }
 
-.dropdown-menu > li > a {
+.navbar-inverse .navbar-toggle {
+    background-color: #333;
+}
+
+.navbar-inverse .navbar-toggle:hover {
+    background-color: black;
+}
+
+.navbar-inverse .navbar-toggle .icon-bar {
+    background-color: white;
+}
+
+    .dropdown-menu > li > a {
     color: white;
     text-decoration: none;
 }

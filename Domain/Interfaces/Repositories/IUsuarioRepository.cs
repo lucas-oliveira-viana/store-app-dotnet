@@ -5,8 +5,12 @@ namespace Domain.Interfaces
 {
     public interface IUsuarioRepository : IRepositoryBase<ApplicationUser>
     {
-        ApplicationUser FindUsuarioById(string id_usuario);
+        ApplicationUser FindUsuarioById(string usuarioId);
 
-        string FindNomeById(string id_usuario);
+        string FindNomeById(string usuarioId);
+
+        string FindCpfById(string usuarioId);
+
+        string FindRgById(string usuarioId);
     }
 }

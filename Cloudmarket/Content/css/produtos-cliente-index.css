@@ -68,6 +68,10 @@
     align-items: self-end;
 }
 
+.display-preco {
+    font-family: 'Roboto';
+}
+
 #table-produto-cli_filter input {
     border: 0;
     font-size: 15px;
@@ -167,6 +171,7 @@ select {
 
     .current:hover {
         color: white;
+        background-color: rgb(1, 129, 215);
     }
 
 .margin-top-15 {

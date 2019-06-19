@@ -128,6 +128,12 @@ namespace Cloudmarket.Web.Controllers
             return RedirectToAction("Index");
         }
 
+        //GET: Pagamento/GetUltimoCartaoCadastrado
+        public JsonResult GetUltimoCartaoCadastrado(string usuarioId)
+        {
+            return Json(_app.GetUltimoCartaoCadastrado(usuarioId), JsonRequestBehavior.AllowGet);
+        }
+
         protected override void Dispose(bool disposing)
         {
             if (disposing)

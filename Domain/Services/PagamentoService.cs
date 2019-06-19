@@ -10,5 +10,10 @@ namespace Cloudmarkt.Domain.Services
         private readonly IPagamentoRepository _repo;
 
         public PagamentoService(IPagamentoRepository repo) : base(repo) => _repo = repo;
+
+        public Pagamento GetUltimoCartaoCadastrado(string usuarioId)
+        {
+            return _repo.GetUltimoCartaoCadastrado(usuarioId);
+        }
     }
 }

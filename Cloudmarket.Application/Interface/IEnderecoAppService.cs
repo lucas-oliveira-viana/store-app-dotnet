@@ -6,5 +6,7 @@ namespace Cloudmarket.Application.Interface
     public interface IEnderecoAppService : IAppServiceBase<Endereco>
     {
         List<string> NomesRua(int id_consultado);
+
+        Endereco GetUltimoEnderecoCadastrado(string usuarioId);
     }
 }

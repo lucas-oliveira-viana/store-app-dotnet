@@ -1,19 +1,60 @@
 ﻿body {
     background-color: white;
-    background: linear-gradient(to right, rgb(0, 149, 249) -90%, rgb(99, 193, 255) 100%);
+    background: linear-gradient(to right, rgb(0, 149, 249) -90%, rgb(0, 149, 249) 100%);
     background-size: cover;
     background-position: right;
     color: white;
 }
 
+h2 {
+    color: rgb(0, 149, 249);
+}
+
 .carrinho-vazio {
     font-size: 18px;
+    color: rgb(0, 149, 249);
 }
 
-.btn-remover {
-    color: black;
+.body-content {
+    padding: 2% 2% 2% 2%;
+    background-color: white;
+    box-shadow: 0px 0px 15px -5px rgba(0,0,0,0.85);
 }
 
-#comprar {
-    color: black;
+th, td, .valor-total-conteudo {
+    color: rgb(0, 149, 249);
+}
+
+.valor-total-conteudo {
+    background: #d1d1d1;
+    padding: 5px 5px 5px 5px;
+    border-bottom: 2px solid rgb(0, 149, 249);
+}
+
+.table > thead > tr > th {
+    border-bottom: 2px solid rgb(0, 149, 249);
+}
+
+.table > tbody > tr > td {
+    border-top: none;
+}
+
+.btn-remover, #comprar {
+    background: none;
+    border: 1px solid rgb(0, 149, 249);
+    color: rgb(0, 149, 249);
+    font-size: 15px;
+    padding-bottom: 2px;
+}
+
+    .btn-remover:hover, #comprar:hover {
+        border: 1px solid rgb(0, 149, 249);
+        color: white;
+        background: rgb(0, 149, 249);
+    }
+
+.valor-total {
+    font-family: 'Roboto';
+    font-size: 22px;
+    padding-bottom: 3vh;
 }

@@ -5,11 +5,11 @@
             '<td>' +
             elemento.Nome +
             '</td>' +
-            '<td>' +
+            '<td class="quantidade-carrinho">' +
             elemento.Quantidade +
             '</td>' +
-            '<td>' +
-            elemento.Preco +
+            '<td class="preco-carrinho">' +
+            "R$ " + elemento.Preco.toString().replace(".", ",") +
             '</td>' +
             '<td>' +
             '<button class="btn-remover"> Remover </button>' + 

@@ -16,6 +16,8 @@ function colocaInformacoesDoProdutoNoBancoTemporariamente(codigoProduto) {
 
             inserirNoCarrinhoTemporario(carrinho);
 
+            carrinho = [];
+
             $(".btn-comprar").append("<p>Produto adicionado ao carrinho!</p>")
         }
     })

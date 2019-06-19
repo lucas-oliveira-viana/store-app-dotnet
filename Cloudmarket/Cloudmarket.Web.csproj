@@ -219,6 +219,7 @@
     <Content Include="Content\css\home.css" />
     <Content Include="Content\css\login.css" />
     <Content Include="Content\css\layout.css" />
+    <Content Include="Content\css\perfil.css" />
     <Content Include="Content\css\produtos-cliente-details.css" />
     <Content Include="Content\css\produtos-cliente-index.css" />
     <Content Include="favicon.ico" />
@@ -268,6 +269,7 @@
     <Content Include="media\js\jquery.dataTables.js" />
     <Content Include="media\js\jquery.dataTables.min.js" />
     <Content Include="media\js\jquery.js" />
+    <Content Include="Scripts\perfil\perfil.js" />
     <Content Include="Scripts\tools\ajax\getCarrinhoSessionByUsuarioId.js" />
     <Content Include="Scripts\tools\ajax\getProdutoByCodigo.js" />
     <Content Include="Scripts\bootstrap.js" />

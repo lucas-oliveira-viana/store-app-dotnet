@@ -13,9 +13,19 @@ namespace Cloudmarket.Application
             _usuarioService = usuarioService;
         }
 
+        public string FindCpfById(string usuarioId)
+        {
+            return _usuarioService.FindCpfById(usuarioId);
+        }
+
         public string FindNomeById(string id_usuario)
         {
             return _usuarioService.FindNomeById(id_usuario);
+        }
+
+        public string FindRgById(string usuarioId)
+        {
+            return _usuarioService.FindRgById(usuarioId);
         }
 
         public ApplicationUser FindUsuarioById(string id_usuario)
